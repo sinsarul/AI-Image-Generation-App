@@ -1,6 +1,15 @@
 import { React, useState, useEffect } from "react";
 import { FormFeild, Loader } from "../components/";
 
+const RenderCards = ({ data, title }) => {
+  if (data?.length > 0) {
+    return data.map((post) => <Card key={post._id} {...post} />);
+  }
+  return (
+    <h2 className="mt-5 font-bold text-[#6449ff] text-xl upperCase">{title}</h2>
+  );
+};
+
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const [allPosts, setAllPosts] = useState(null);
@@ -29,16 +38,12 @@ const Home = () => {
         ) : (
           <>
             {searchText && (
-              <h2 className="font-meadium text-[]3666e75 text-xl mb-3">
+              <h2 className="font-medium text-[]3666e75 text-xl mb-3">
                 Showing results for
                 <span className="text-[#222328">{searchText}</span>
               </h2>
             )}
-            <div className="grid lg:">
-
-            </div>
-            
-
+            <div className="grid lg:grid-cols4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3"></div>
           </>
         )}
       </div>
