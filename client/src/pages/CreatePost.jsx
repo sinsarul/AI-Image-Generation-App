@@ -1,62 +1,4 @@
-// import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
 
-// import { preview } from "../assets";
-// import { getRandomPrompt } from "../utills";
-// import { FormField, Loader } from "../components";
-
-// const handleSubmit = () => {};
-
-// const handleChange = (e) => {};
-
-// const handleSurpriseMe = () => {};
-
-// const CreatePost = () => {
-//   const navigate = useNavigate();
-//   const [form, setForm] = useState({
-//     name: "",
-//     prompt: "",
-//     photo: "",
-//   });
-//   const [generatingImg, secGeneratingImg] = useState(false);
-//   const [loading, setLoading] = useState(false);
-
-//   return (
-//     <section className="max-w-7xl max-auto">
-//       <div>
-//         <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
-//         <p className="mt-2 text-[#666e75] text-[16px] max-w[500]">
-//           Create imaginative and visually stunning images through DALL-E AI and
-//           share them with the Community
-//         </p>
-//       </div>
-//       <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
-//         <div className="flex flex-col gap-5">
-//           <FormField
-//             labelName="Your name"
-//             type="text"
-//             name="name"
-//             placeholder="Jone Doe"
-//             value={form.name}
-//             handleChange={handleChange}
-//           />
-//           <FormField
-//             labelName="Prompt"
-//             type="text"
-//             name="prompt"
-//             placeholder="A Push toy robort sitting against a yellow wall"
-//             value={form.prompt}
-//             handleChange={handleChange}
-//             handleSurpriseMe={handleSurpriseMe}
-//           />
-          
-//         </div>
-//       </form>
-//     </section>
-//   );
-// };
-
-// export default CreatePost;
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -175,7 +117,7 @@ const CreatePost = () => {
             ) : (
               <img
                 src={preview}
-                alt="preview"
+                alt="preview" 
                 className="w-9/12 h-9/12 object-contain opacity-40"
               />
             )}
@@ -193,7 +135,7 @@ const CreatePost = () => {
             type="button"
             onClick={generateImage}
             className=" text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
-          >
+          > 
             {generatingImg ? 'Generating...' : 'Generate'}
           </button>
         </div>
