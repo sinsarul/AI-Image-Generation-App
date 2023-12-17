@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import { FormFeild, Loader } from "../components/";
+import { Card , FormFeild, Loader } from "../components/";
 
 const RenderCards = ({ data, title }) => {
   if (data?.length > 0) {
@@ -14,7 +14,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [allPosts, setAllPosts] = useState(null);
 
-  const [searchText, setSearchText] = useState();
+  const [searchText, setSearchText] = useState('');
   return (
     <section className="max-w-7x mx-auto">
       <div>
